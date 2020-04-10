@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAMP ORGANIZE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/table.css" />
+    </head>
+    <body>
+        <style>
+            #details{
+                display: inline-block;
+                position: absolute;
+            }
+            #sch{
+                outline:solid;
+            }
+        </style>
+        <div id="header">
+      <div id="logo">
+        <div id="logo_text" style="display: inline;">
+          <h1><a href="index.html">BLOODR</a></h1><H2>Blood Bank Management</H2>
+          <h2>Donate blood...<br>save life...</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+             <li><a href="welcome.jsp">Dashboard</a></li>
+            <li  class="selected"><a href="orgcamp.html">Organize a Camp</a></li>
+             <li><a href="blogout.jsp">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+         <div id="sidebar_container">
+           <img src="img1.jpg" style="width: 200px; height: 200px;">
+           <img src="img2.png" style="width: 200px;">
+           <img src="img3.jpg" style="width: 200px; height: 200px;">
+           <img src="img4.jpg" style="width: 200px; height: 200px;">
+      </div>
+      <div id="content">
+          <h1>Welcome to BLOODR Blood Bank Management System</h1>
+       <p>Helping you to help others</p>
+       <br><br>
+       <h2>ORGANIZE A BLOOD DONATING CAMP</h2>
+       <br><br>
+           <br><br>
+           <form name="add" action="camporg.jsp" method="post"><br>
+                                                CAMP ID*:<br>
+                                                <input type="number" name="campid" maxlength="8" required>
+                                                <br>Start Date*:<br>
+                                                <input type="date" name="sdate" required>
+						<br>
+                                                <input type="date" name="edate" required><br>
+          <input type="submit" value="SUBMIT" style="width: 100px;" onclick="test()">
+       </form>
+           <script>
+                 function test(){ 
+                     date1=new Date(document.add.sdate.value);
+                     date2=new Date(document.add.edate.value);
+                      if(date1>date2){
+                          alert("End date should not before Start date");
+                          document.add.sdate.value="";
+                          document.add.edate.value="";
+                          window.location="orgcamp.html";
+                          return false;
+                      }
+                }
+               </script></div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>BLOOD BANK</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/table.css" />
+    </head>
+    <body>
+        <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.html">BLOODR</a></h1><H2>Blood Bank Management</H2>
+          
+          <h2>Donate blood...<br>save life...</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="bank.html">BLOOD BANK</a></li>
+          
+        </ul>
+      </div>
+    </div>
+       <div id="sidebar_container">
+           <img src="img1.jpg" style="width: 200px; height: 200px;">
+           <img src="img2.png" style="width: 200px;">
+           <img src="img3.jpg" style="width: 200px; height: 200px;">
+           <img src="img4.jpg" style="width: 200px; height: 200px;">
+      </div>
+      <div id="content">
+        <h1>Welcome to BLOODR Blood Bank Management System</h1>
+       <p>Helping you to help others</p>
+         <h1><font color="red"><b>BLOOD BANK LOGIN</b></font></h1>
+           <form method="post" action="hosplogin.jsp" name="log">
+                  UNIQUE ID:<br>
+                  <input type="text" name="id" required>
+                  <br>
+                   Password:<br>
+                   <input type="password" name="pass" minlength="8" required>
+                  <br><br>
+                  <input type="submit" value="Submit">
+                  </form> 
+      </div>
+        <script>
+            function test(){ 
+                 if(log.id.value.length==0||log.pass.value.length==0){
+                  alert("Fields cannot be empty..");
+                  return false;}
+          return true;}
+        </script>
+    </body>
+</html>
